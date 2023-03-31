@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
+/* Resets CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+i {
+  cursor: pointer;
+}
+
+body {
+  /* background-color: #fcf6f1; */
+  background-color: #f6ecc9;
+  font-family: "Poppins", sans-serif;
+}
+
+#navbar {
+  background-color: #f6ecc9;
+}
+
+.about-title {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+}
+
+#note-item {
+  border-radius: 25px;
+  background-color: #c7ebb3;
+  margin: 10px;
+}
+
+#note-item-card {
+  border: none;
+}
+
+#note-item-body {
+  background-color: #c7ebb3;
+}
+
+.edit-input{
+  padding: .5rem 1rem;
+  border: 1px solid #838080;
+}
+
+/* Search bar CSS */
+.search-box {
+  color: #555;
+  display: flex;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.search-box input[type="search"] {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid transparent;
+  border-radius: inherit;
+}
+
+.search-box input[type="search"]::placeholder {
+  color: #bbb;
+}
+
+/* using text indent and overflow to hide the text */
+.search-box button[type="submit"] {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 40px;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat center;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.search-box button[type="submit"]:hover {
+  opacity: 1;
+}
+
+#search:focus {
+  border: none;
+  outline: none;
+}
+
+#search:focus-visible {
+  border-radius: 8px;
+}
+
+.hamburger-icon {
+  margin: 10px;
+  background-color: white;
+}
+
+#alert {
+  z-index: 10;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Utility classes */
+.center {
+  text-align: center;
+}
+
+.custom-btn {
+  padding: 6px 12px;
+  background-color: #ffd5f8;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.35s ease-out;
+}
+
+.custom-btn:hover {
+  background-color: #ff82ea;
+  color: white;
+}
+
+/* Signup or login inputs */
+/* .input-focus{
+  width:80%;
+  transition: width 0.5s ease-in-out;
+}
+
+.input-focus:focus{
+  width:100%;
+} */
+
+.focus {
+  width: 180px;
+  -webkit-transition: width 0.35s ease-in-out;
+  transition: width 0.35s ease-in-out;
+  margin: 10px 0px;
+  padding: 12px;
+}
+
+.focus:focus {
+  width: 220px;
+}
+
+/* .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+} */
+
+.required {
+  color: red;
+}
+
+.hover-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 43px;
+  width: 43px;
+  opacity: 0;
+  border-radius: 50%;
+  border: 1.5px solid #141515;
+  margin-top: 12px;
+  transform: scale(0);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover.hover-arrow {
+  width: 43px;
+  height: 43px;
+  visibility: visible;
+  transform: scale(1);
+  opacity: 1;
+}
